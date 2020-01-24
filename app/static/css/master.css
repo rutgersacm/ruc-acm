@@ -1,5 +1,5 @@
 :root {
-  --mainSplash: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F95%2F51%2F1R6GT3.jpg&f=1&nofb=1');
+  --mainSplash: url('../images/background.png');
 
   --color1: rgba(0, 0, 0, 0.2);
   --color2: rgba(0, 0, 0, 0.6);
@@ -64,6 +64,7 @@ li.logo-holder {
 .splash-main {
   min-height: 100%;
   width: 100%;
+  background-image: var(--mainSplash);
   background-position: center;
   background-repeat: no-repeat;
   background-size:cover;
