@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rutgers ACM Camden Chapter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
+    <script src="{{ url_for('static', filename='js/three.r95.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vanta.dots.min.js') }}"></script>
+  </head>
+  <body>
+    <nav class="top">
+      <ul class="navitems">
+        <li class="logo-holder"><img class="logo" src="static/images/acm-logo.png" /></li>
+        <li class="navitem"><a href="{{url_for('index')}}">Home</a></li>
+        <li class="navitem"><a href="{{url_for('officers')}}">Officers</a></li>
+        <li class="navitem"><a href="{{url_for('events')}}">Events</a></li>
+        <li class="navitem"><a href="/achievements">Achievements</a></li>
+        <li class="navitem"><a href="/projects">Projects</a></li>
+        <li class="navitem"><a href="/photos">Photos</a></li>
+        <li></li>
+      </ul>
+    </nav>
+    {% block content %}{% endblock %}
+    <footer>
+      Made by the RUC-ACM Web Development Team.
+    </footer>
+  </body>
+</html>

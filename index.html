@@ -3,8 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>Rutgers ACM Camden Chapter</title>
+    <link rel="stylesheet" href="static/css/master.css">
+    <script src="static/js/three.r95.min.js"></script>
+    <script src="static/js/vanta.dots.min.js"></script>
   </head>
   <body>
-    <h1>Hello</h1>
+    <nav class="top">
+      <ul class="navitems">
+        <li class="logo-holder"><img class="logo" src="static/images/acm-logo.png" /></li>
+        <li class="navitem"><a href="index.html">Home</a></li>
+        <li class="navitem"><a href="officers.html">Officers</a></li>
+        <li class="navitem"><a href="events.html">Events</a></li>
+        <li class="navitem"><a href="achievements.html">Achievements</a></li>
+        <li class="navitem"><a href="projects.html">Projects</a></li>
+        <li class="navitem"><a href="photos.html">Photos</a></li>
+        <li></li>
+      </ul>
+    </nav>
+
+    <div class="splash-main" id="splash-main">
+      <div class="content">
+        <h1 class="title">Rutgers ACM Camden Chapter</h1>
+      </div>
+      <div class="content">
+        <h3 class="tagline">Dedicated to technical, professional, and personal development in the context of computer science.</h2>
+      </div>
+    </div>
+    <div class="content">
+      <h1 class="title black">About Us</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <footer></footer>
+    <script>
+    VANTA.DOTS({
+      el: "#splash-main",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
+    })
+    </script>
   </body>
 </html>

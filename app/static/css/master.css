@@ -1,0 +1,174 @@
+:root {
+  --mainSplash: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F95%2F51%2F1R6GT3.jpg&f=1&nofb=1');
+
+  --color1: rgba(0, 0, 0, 0.2);
+  --color2: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: serif;
+}
+
+nav {
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding-inline-start: 0px;
+  align-items: center;
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+  vertical-align: middle;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li.navitem:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+}
+
+li.logo-holder {
+  padding: 0;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+
+.splash-main {
+  min-height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.content {
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.content p {
+  font-size: 2em;
+}
+
+.title {
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.tagline {
+  color: white;
+  font-size: 2.5em;
+  font-weight: lighter;
+}
+
+.black {
+  color: black;
+}
+
+.icon {
+  width: 150px;
+  height: 150px;
+  transform: scale(0.95);
+  transition: 0.4s;
+  margin: 0 auto;
+}
+
+.icon:hover {
+  transform: scale(1);
+}
+
+.tech {
+  min-height: 200px;
+  padding-top: 50px;
+  display:flex;
+  color: white;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech2 {
+  display: flex;
+}
+
+ .program {
+   margin: 0;
+   padding: 0;
+   flex: 1;
+   color: white;
+   justify-content: center;
+   text-align: center;
+ }
+
+ .projects {
+   display: flex;
+   overflow-x: auto;
+   /* without min width, for some reason this doesnt show all boxes */
+   min-width: 0px; !important
+ }
+
+ div::-webkit-scrollbar {
+   width: 1em;
+ }
+
+ div::-webkit-scrollbar-track {
+   border-radius: 10px;
+ }
+
+ div::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+   background-color: var(--color1);
+   outline: 2px solid slategrey;
+ }
+
+ div::-webkit-scrollbar:vertical {
+   display: none;
+ }
+
+ .project {
+   flex: 1;
+   box-shadow: 2px 2px 4px var(--color2);
+   padding: 15px;
+   margin: 5px;
+   transform: scale(0.95);
+   transition: 0.4s;
+   user-select: none;
+ }
+
+ .project:hover {
+   transform: scale(1);
+ }
+
+ img.project-preview {
+   max-width: 300px;
+   margin: 0 auto;
+ }
