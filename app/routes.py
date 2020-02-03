@@ -14,3 +14,7 @@ def officers():
 @app.route('/events')
 def events():
     return render_template('events.html')
+
+@app.route('/achievements')
+def achievements():
+    return render_template('achievements.html')
