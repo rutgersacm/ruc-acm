@@ -32,6 +32,10 @@ git push
 
 When working, after you've added the remote you only need to run the last 4 commands to ensure your development branch is even with origin.
 
+#### Pull Requests
+
+Once you're ready to make a Pull Request, head to your version of the repo on github, switch to the development branch, and check above the code; there should be an option to make a pull request if you are ahead of origin/development. Write up a summary of changes and submit. You'll be notified when someone has accepted/declined or left feedback on it.
+
 #### Running the Flask app
 
 To install the requirements and run the development server:
