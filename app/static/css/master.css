@@ -1,8 +1,8 @@
 :root {
   --mainSplash: url('../images/background.png');
 
-  --color1: rgba(0, 0, 0, 0.2);
-  --color2: rgba(0, 0, 0, 0.6);
+  --color1: rgba(255,0, 55, 1);
+  --color2: rgba(204,0,51, 0.6);
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 nav {
   min-width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(204, 0, 51, 1);
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -44,7 +44,7 @@ nav ul li a {
 }
 
 nav ul li.navitem:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(180, 0, 51, 1);
   cursor: pointer;
 }
 li {
@@ -76,7 +76,7 @@ li.logo-holder {
 }
 
 .content p {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .title {
