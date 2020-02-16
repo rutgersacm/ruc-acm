@@ -12,6 +12,8 @@ body {
 }
 
 .title {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   color: white;
   font-size: 3em;
   font-weight: bold;
@@ -120,7 +122,7 @@ body {
 }
 
 .content {
-  padding: 30px;
+  padding: 1.5em;
   height: 100%;
 }
 
@@ -147,6 +149,7 @@ body {
 
 
 
+
 canvas {
   height: 100%;
 }
@@ -162,13 +165,50 @@ footer {
   padding: 30px;
 }
 
+.socialMedia {
+  display:flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.socMedSection {
+  padding: 1em;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 img {
   display: block;
   width: 100%;
 }
 
-#calendarContainer {
+.content-photo {
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+.content > .phototag {
+  text-align: center;
+}
+
+.phototag {
+  margin: 10px auto;
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+}
+.calendarContainer {
   width: 90%;
+  margin: 0 auto;
+}
+
+#calendar {
+  font-family: sans-serif;
+}
+
+hr {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
  @media only screen and (min-width: 600px) {
@@ -191,6 +231,7 @@ img {
      margin: 0;
      padding-inline-start: 0px;
      align-items: center;
+     justify-content: space-between;
    }
 
    nav ul li {
@@ -245,7 +286,7 @@ img {
    }
 
    .content {
-     padding: 50px;
+     padding: 1.5em;
      margin: 0 auto;
    }
 
@@ -335,8 +376,8 @@ img {
      transform: scale(1);
    }
 
-   #calendarContainer {
-     width: 50%;
+   .calendarContainer {
+     width: 75%;
    }
 
  }
