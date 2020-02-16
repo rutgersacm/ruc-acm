@@ -91,6 +91,8 @@
       var calendar = new FullCalendar.Calendar(calendarEl, {
         plugins: [ 'dayGrid', 'googleCalendar' ],
         timeZone: "EST",
+        // At production this key will be restricted to
+        // https requests only from our domain.
         googleCalendarApiKey: '',
         events: {
           googleCalendarId: 'm7af814u2m635p3p3ot79jvptc@group.calendar.google.com',
