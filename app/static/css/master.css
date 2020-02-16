@@ -124,8 +124,47 @@ body {
   height: 100%;
 }
 
+.officers {
+  display: flex;
+  flex-direction: column;
+}
+
+.officer {
+  flex: 1;
+  box-shadow: 2px 2px 4px var(--color2);
+  padding: 15px;
+  margin: 5px;
+  transform: scale(0.95);
+  transition: 0.4s;
+  user-select: none;
+  text-align: center;
+
+}
+
+.officer:hover {
+  transform: scale(1);
+}
+
+
+
 canvas {
   height: 100%;
+}
+
+footer {
+  min-height: 200px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+footer {
+  padding: 30px;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
  @media only screen and (min-width: 600px) {
@@ -268,13 +307,13 @@ canvas {
      margin: 0 auto;
    }
 
-   .projects {
+   .officers {
      display: flex;
      overflow-x: auto;
      /* without min width, for some reason this doesnt show all boxes */
-     min-width: 0px; !important
+     flex-direction: row;
    }
-   .project {
+   .officer {
      flex: 1;
      box-shadow: 2px 2px 4px var(--color2);
      padding: 15px;
@@ -284,7 +323,7 @@ canvas {
      user-select: none;
    }
 
-   .project:hover {
+   .officer:hover {
      transform: scale(1);
    }
 
