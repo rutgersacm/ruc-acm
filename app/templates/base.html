@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rutgers ACM Camden Chapter</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
     <script src="{{ url_for('static', filename='js/three.r95.min.js') }}"></script>
@@ -20,9 +21,65 @@
         <li class="logo-holder"><img class="logo" src="static/images/rutgers-logo.png" /></li>
       </ul>
     </nav>
+    <nav class="mobile">
+      <img src="static/images/acm-logo.png" alt="ACM Logo" class="logo"/ >
+      <button class="dropbtn" onClick="showHideDropdown();">Menu
+        <div class="dropdown-content">
+          <a href="{{url_for('index')}}">Home</a>
+          <a href="{{url_for('officers')}}">Officers</a>
+          <a href="{{url_for('events')}}">Events</a>
+          <a href="{{url_for('index')}}">Home</a>
+          <a href="{{url_for('officers')}}">Officers</a>
+          <a href="{{url_for('events')}}">Events</a>
+        </div>
+      </button>
+      <img src="static/images/rutgers-logo.png" alt="Rutgers Logo" class="logo" />
+    </nav>
     {% block content %}{% endblock %}
     <footer>
       Made by the RUC-ACM Web Development Team.
     </footer>
+    <script>
+      const mobileNav = document.querySelector(".mobile");
+      const desktopNav = document.querySelector(".top");
+      const mobileNavContent = document.querySelector(".dropdown-content");
+      var curWidth = window.innerWidth;
+
+      if (curWidth > 900) {
+        mobileNav.style.display = "none";
+      }
+      else {
+        desktopNav.style.display = "none";
+      }
+
+      function showHideDropdown() {
+        mobileNavContent.classList.toggle('show');
+      }
+
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+          if (mobileNavContent.classList.contains('show')) {
+            mobileNavContent.classList.remove('show');
+          }
+        }
+      }
+
+      window.addEventListener('resize', function (e) {
+        mobileNavContent.classList.remove('show');
+        if (curWidth - 901 > 0) {
+          curWidth = window.innerWidth;
+          return;
+        }
+        if (window.innerWidth > 901) {
+          mobileNav.style.display = "none";
+          desktopNav.style.display = "block";
+        }
+        else {
+          desktopNav.style.display = "none";
+          mobileNav.style.display = "flex";
+        }
+      });
+
+    </script>
   </body>
 </html>
