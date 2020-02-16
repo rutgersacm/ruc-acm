@@ -13,7 +13,7 @@ body {
 
 .title {
   color: white;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: bold;
 }
 
@@ -167,6 +167,10 @@ img {
   width: 100%;
 }
 
+#calendarContainer {
+  width: 90%;
+}
+
  @media only screen and (min-width: 600px) {
 
  }
@@ -219,6 +223,10 @@ img {
    .logo {
      width: 50px;
      height: 50px;
+   }
+
+   .title {
+     font-size: 4em;
    }
 
 
@@ -325,6 +333,10 @@ img {
 
    .officer:hover {
      transform: scale(1);
+   }
+
+   #calendarContainer {
+     width: 50%;
    }
 
  }
