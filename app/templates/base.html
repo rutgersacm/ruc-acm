@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
   <link rel="stylesheet" href=" {{ url_for('static', filename="js/@fullcalendar/core/main.min.css")}}">
   <link rel="stylesheet" href=" {{ url_for('static', filename="js/@fullcalendar/daygrid/main.min.css")}}">
+  <link rel="stylesheet" href=" {{ url_for('static', filename="js/@fullcalendar/list/main.min.css")}}">
   <script src="{{ url_for('static', filename='js/three.r95.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/vanta.globe.min.js') }}"></script>
   <script src=" {{ url_for('static', filename="js/@fullcalendar/core/main.js")}}"></script>
   <script src=" {{ url_for('static', filename="js/@fullcalendar/daygrid/main.js")}}"></script>
   <script src=" {{ url_for('static', filename="js/@fullcalendar/google-calendar/main.js")}}"></script>
+  <script src=" {{ url_for('static', filename="js/@fullcalendar/list/main.js")}}"></script>
 </head>
 
 <body>
@@ -44,12 +46,27 @@
   </nav>
   {% block content %}{% endblock %}
   <footer>
+    <div class="socialMedia">
+      <div class="socMedSection">
+        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48px" height="48px"><path d="M 24 4.300781 C 23.101563 4.699219 22.199219 5 21.199219 5.101563 C 22.199219 4.5 23 3.5 23.398438 2.398438 C 22.398438 3 21.398438 3.398438 20.300781 3.601563 C 19.300781 2.601563 18 2 16.601563 2 C 13.898438 2 11.699219 4.199219 11.699219 6.898438 C 11.699219 7.300781 11.699219 7.699219 11.800781 8 C 7.699219 7.800781 4.101563 5.898438 1.699219 2.898438 C 1.199219 3.601563 1 4.5 1 5.398438 C 1 7.101563 1.898438 8.601563 3.199219 9.5 C 2.398438 9.398438 1.601563 9.199219 1 8.898438 C 1 8.898438 1 8.898438 1 9 C 1 11.398438 2.699219 13.398438 4.898438 13.800781 C 4.5 13.898438 4.101563 14 3.601563 14 C 3.300781 14 3 14 2.699219 13.898438 C 3.300781 15.898438 5.101563 17.300781 7.300781 17.300781 C 5.601563 18.601563 3.5 19.398438 1.199219 19.398438 C 0.800781 19.398438 0.398438 19.398438 0 19.300781 C 2.199219 20.699219 4.800781 21.5 7.5 21.5 C 16.601563 21.5 21.5 14 21.5 7.5 C 21.5 7.300781 21.5 7.101563 21.5 6.898438 C 22.5 6.199219 23.300781 5.300781 24 4.300781"/></svg>
+        <p>Twitter</p>
+      </div>
+      <div class="socMedSection">
+        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="48px" height="48px"><path d="M 7.546875 0 C 3.390625 0 0 3.390625 0 7.546875 L 0 18.453125 C 0 22.609375 3.390625 26 7.546875 26 L 18.453125 26 C 22.609375 26 26 22.609375 26 18.453125 L 26 7.546875 C 26 3.390625 22.609375 0 18.453125 0 Z M 7.546875 2 L 18.453125 2 C 21.527344 2 24 4.46875 24 7.546875 L 24 18.453125 C 24 21.527344 21.53125 24 18.453125 24 L 7.546875 24 C 4.472656 24 2 21.53125 2 18.453125 L 2 7.546875 C 2 4.472656 4.46875 2 7.546875 2 Z M 20.5 4 C 19.671875 4 19 4.671875 19 5.5 C 19 6.328125 19.671875 7 20.5 7 C 21.328125 7 22 6.328125 22 5.5 C 22 4.671875 21.328125 4 20.5 4 Z M 13 6 C 9.144531 6 6 9.144531 6 13 C 6 16.855469 9.144531 20 13 20 C 16.855469 20 20 16.855469 20 13 C 20 9.144531 16.855469 6 13 6 Z M 13 8 C 15.773438 8 18 10.226563 18 13 C 18 15.773438 15.773438 18 13 18 C 10.226563 18 8 15.773438 8 13 C 8 10.226563 10.226563 8 13 8 Z"/></svg>
+        <p>Instagram</p>
+      </div>
+      <div class="socMedSection">
+        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="48px" height="48px">    <path d="M 13 2 C 12.447 2 12 2.448 12 3 L 12 47 C 12 47.358 12.190953 47.689187 12.501953 47.867188 C 12.812953 48.045187 13.194906 48.043281 13.503906 47.863281 L 25 41.158203 L 36.496094 47.863281 C 36.651094 47.954281 36.826 48 37 48 C 37.172 48 37.344047 47.956187 37.498047 47.867188 C 37.809047 47.689188 38 47.358 38 47 L 38 33.78125 C 38.65072 33.915603 39.322734 33.988281 40.011719 33.988281 C 45.511719 33.988281 50.011719 29.488281 50.011719 23.988281 C 50.011719 18.488281 45.511719 13.988281 40.011719 13.988281 C 39.322734 13.988281 38.65072 14.059007 38 14.193359 L 38 3 C 38 2.448 37.553 2 37 2 L 13 2 z M 40.011719 15.988281 C 44.411719 15.988281 48.011719 19.588281 48.011719 23.988281 C 48.011719 28.388281 44.411719 31.988281 40.011719 31.988281 C 35.611719 31.988281 32.011719 28.388281 32.011719 23.988281 C 32.011719 19.588281 35.611719 15.988281 40.011719 15.988281 z M 40.011719 18.087891 C 39.411719 18.087891 39.011719 18.487891 39.011719 19.087891 L 39.011719 22.988281 L 35.111328 22.988281 C 34.511328 22.988281 34.111328 23.388281 34.111328 23.988281 C 34.111328 24.588281 34.511328 24.988281 35.111328 24.988281 L 39.011719 24.988281 L 39.011719 28.888672 C 39.011719 29.488672 39.411719 29.888672 40.011719 29.888672 C 40.611719 29.888672 41.011719 29.488672 41.011719 28.888672 L 41.011719 24.988281 L 44.912109 24.988281 C 45.512109 24.988281 45.912109 24.588281 45.912109 23.988281 C 45.912109 23.388281 45.512109 22.988281 44.912109 22.988281 L 41.011719 22.988281 L 41.011719 19.087891 C 41.011719 18.487891 40.611719 18.087891 40.011719 18.087891 z"/></svg>
+        <p>Engage</p>
+      </div>
+    </div>
     Made with ❤️ by the RUC-ACM Web Development Team.
   </footer>
   <script>
     const mobileNav = document.querySelector(".mobile");
     const desktopNav = document.querySelector(".top");
     const mobileNavContent = document.querySelector(".dropdown-content");
+    let calendar;
     var curWidth = window.innerWidth;
 
     if (curWidth > 900) {
@@ -79,23 +96,51 @@
       if (window.innerWidth > 901) {
         mobileNav.style.display = "none";
         desktopNav.style.display = "block";
+        try {
+          calendar.changeView('dayGridMonth');
+        }
+        catch(err) {
+          console.log("no calendar on this page");
+        }
       } else {
         desktopNav.style.display = "none";
         mobileNav.style.display = "flex";
+        try {
+          calendar.changeView('listWeek');
+        }
+        catch(err) {
+          console.log("no calendar on this page");
+        }
       }
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        plugins: [ 'dayGrid', 'googleCalendar' ],
+      try {
+        var calendarEl = document.getElementById('calendar');
+      }
+      catch(err) {
+        console.log("No calendar id on page. If this seems like an error, add a <div id='calendar'></div>");
+        return;
+      }
+      calendar = new FullCalendar.Calendar(calendarEl, {
+        defaultView: window.innerWidth > 900 ? 'dayGridMonth' : 'listWeek',
+        plugins: [ 'dayGrid', 'googleCalendar', 'list' ],
         timeZone: "EST",
         // At production this key will be restricted to
         // https requests only from our domain.
         googleCalendarApiKey: '',
         events: {
           googleCalendarId: 'm7af814u2m635p3p3ot79jvptc@group.calendar.google.com',
+        },
+        theme: true,
+        themeSystem: 'standard',
+        //height: 500,
+        aspectRatio: 2,
+        contentHeight: 'auto',
+        header: {
+          left: 'title',
+          center: 'today',
+          right: 'prev,next',
         }
       });
 
