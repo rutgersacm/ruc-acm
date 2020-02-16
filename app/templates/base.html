@@ -1,85 +1,105 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rutgers ACM Camden Chapter</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
-    <script src="{{ url_for('static', filename='js/three.r95.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/vanta.globe.min.js') }}"></script>
-  </head>
-  <body>
-    <nav class="top">
-      <ul class="navitems">
-        <li class="logo-holder"><img class="logo" src="static/images/acm-logo.png" /></li>
-        <li class="navitem"><a href="{{url_for('index')}}">Home</a></li>
-        <li class="navitem"><a href="{{url_for('officers')}}">Officers</a></li>
-        <li class="navitem"><a href="{{url_for('events')}}">Events</a></li>
-        <li class="navitem"><a href="/achievements">Achievements</a></li>
-        <li class="navitem"><a href="/projects">Projects</a></li>
-        <li class="navitem"><a href="/photos">Photos</a></li>
-        <li class="logo-holder"><img class="logo" src="static/images/rutgers-logo.png" /></li>
-      </ul>
-    </nav>
-    <nav class="mobile">
-      <img src="static/images/acm-logo.png" alt="ACM Logo" class="logo"/ >
-      <button class="dropbtn" onClick="showHideDropdown();">Menu
-        <div class="dropdown-content">
-          <a href="{{url_for('index')}}">Home</a>
-          <a href="{{url_for('officers')}}">Officers</a>
-          <a href="{{url_for('events')}}">Events</a>
-          <a href="{{url_for('achievements')}}">Achievements</a>
-          <a href="#">Projects</a>
-          <a href="#">Photos</a>
-        </div>
-      </button>
-      <img src="static/images/rutgers-logo.png" alt="Rutgers Logo" class="logo" />
-    </nav>
-    {% block content %}{% endblock %}
-    <footer>
-      Made with ❤️ by the RUC-ACM Web Development Team.
-    </footer>
-    <script>
-      const mobileNav = document.querySelector(".mobile");
-      const desktopNav = document.querySelector(".top");
-      const mobileNavContent = document.querySelector(".dropdown-content");
-      var curWidth = window.innerWidth;
 
-      if (curWidth > 900) {
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rutgers ACM Camden Chapter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
+  <link rel="stylesheet" href=" {{ url_for('static', filename="js/@fullcalendar/core/main.min.css")}}">
+  <link rel="stylesheet" href=" {{ url_for('static', filename="js/@fullcalendar/daygrid/main.min.css")}}">
+  <script src="{{ url_for('static', filename='js/three.r95.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/vanta.globe.min.js') }}"></script>
+  <script src=" {{ url_for('static', filename="js/@fullcalendar/core/main.js")}}"></script>
+  <script src=" {{ url_for('static', filename="js/@fullcalendar/daygrid/main.js")}}"></script>
+  <script src=" {{ url_for('static', filename="js/@fullcalendar/google-calendar/main.js")}}"></script>
+</head>
+
+<body>
+  <nav class="top">
+    <ul class="navitems">
+      <li class="logo-holder"><img class="logo" src="static/images/acm-logo.png" /></li>
+      <li class="navitem"><a href="{{url_for('index')}}">Home</a></li>
+      <li class="navitem"><a href="{{url_for('officers')}}">Officers</a></li>
+      <li class="navitem"><a href="{{url_for('events')}}">Events</a></li>
+      <li class="navitem"><a href="{{url_for('achievements')}}">Achievements</a></li>
+      <li class="navitem"><a href="{{url_for('projects')}}">Projects</a></li>
+      <li class="navitem"><a href="{{url_for('photos')}}">Photos</a></li>
+      <li class="logo-holder"><img class="logo" src="static/images/rutgers-logo.png" /></li>
+    </ul>
+  </nav>
+  <nav class="mobile">
+    <img src="static/images/acm-logo.png" alt="ACM Logo" class="logo"/>
+    <button class="dropbtn" onClick="showHideDropdown();">Menu
+      <div class="dropdown-content">
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('officers')}}">Officers</a>
+        <a href="{{url_for('events')}}">Events</a>
+        <a href="{{url_for('achievements')}}">Achievements</a>
+        <a href="{{url_for('projects')}}">Projects</a>
+        <a href="{{url_for('photos')}}">Photos</a>
+      </div>
+    </button>
+    <img src="static/images/rutgers-logo.png" alt="Rutgers Logo" class="logo" />
+  </nav>
+  {% block content %}{% endblock %}
+  <footer>
+    Made with ❤️ by the RUC-ACM Web Development Team.
+  </footer>
+  <script>
+    const mobileNav = document.querySelector(".mobile");
+    const desktopNav = document.querySelector(".top");
+    const mobileNavContent = document.querySelector(".dropdown-content");
+    var curWidth = window.innerWidth;
+
+    if (curWidth > 900) {
+      mobileNav.style.display = "none";
+    } else {
+      desktopNav.style.display = "none";
+    }
+
+    function showHideDropdown() {
+      mobileNavContent.classList.toggle('show');
+    }
+
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        if (mobileNavContent.classList.contains('show')) {
+          mobileNavContent.classList.remove('show');
+        }
+      }
+    }
+
+    window.addEventListener('resize', function(e) {
+      mobileNavContent.classList.remove('show');
+      if (curWidth - 901 > 0) {
+        curWidth = window.innerWidth;
+        return;
+      }
+      if (window.innerWidth > 901) {
         mobileNav.style.display = "none";
-      }
-      else {
+        desktopNav.style.display = "block";
+      } else {
         desktopNav.style.display = "none";
+        mobileNav.style.display = "flex";
       }
+    });
 
-      function showHideDropdown() {
-        mobileNavContent.classList.toggle('show');
-      }
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
 
-      window.onclick = function(e) {
-        if (!e.target.matches('.dropbtn')) {
-          if (mobileNavContent.classList.contains('show')) {
-            mobileNavContent.classList.remove('show');
-          }
-        }
-      }
-
-      window.addEventListener('resize', function (e) {
-        mobileNavContent.classList.remove('show');
-        if (curWidth - 901 > 0) {
-          curWidth = window.innerWidth;
-          return;
-        }
-        if (window.innerWidth > 901) {
-          mobileNav.style.display = "none";
-          desktopNav.style.display = "block";
-        }
-        else {
-          desktopNav.style.display = "none";
-          mobileNav.style.display = "flex";
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        plugins: [ 'dayGrid', 'googleCalendar' ],
+        timeZone: "EST",
+        googleCalendarApiKey: '',
+        events: {
+          googleCalendarId: 'm7af814u2m635p3p3ot79jvptc@group.calendar.google.com',
         }
       });
 
-    </script>
-  </body>
+      calendar.render();
+    });
+  </script>
+</body>
+
 </html>

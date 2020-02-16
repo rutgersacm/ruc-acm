@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-<h1> Welcome to Photos</h1>
-</head>
-
-<body>
-<p>We now have...zero photos</p>
-</body>
-
-<footer>
-</footer>
-
-</html>
+{% block content %}
+<div class="content">
+  <h2 class="title black">Photos</h2>
+  <p>We now have...zero photos</p>
+</div>
+{% endblock %}
