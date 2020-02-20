@@ -8,8 +8,19 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: serif;
+  font-family: "Lato", serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PT Mono", serif;
+}
+
+
 
 .title {
   margin-top: 0.5em;
@@ -21,7 +32,7 @@ body {
 
 .tagline {
   color: white;
-  font-size: 2.5em;
+  font-size: 2.1em;
   font-weight: lighter;
 }
 
@@ -49,6 +60,7 @@ body {
 .logo {
   width: 10%;
   height: 10%;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -140,11 +152,27 @@ body {
   transition: 0.4s;
   user-select: none;
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
 
 }
 
 .officer:hover {
   transform: scale(1);
+}
+
+.officer-title{
+  margin-top: 0.75em;
+  font-size: 2.25em;
+  font-weight: bold;
+}
+
+.officer > p {
+  font-size: 1em;
 }
 
 
@@ -159,9 +187,6 @@ footer {
   height: auto;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-}
-
-footer {
   padding: 30px;
 }
 
@@ -264,6 +289,7 @@ hr {
    .logo {
      width: 50px;
      height: 50px;
+     margin: 0 auto;
    }
 
    .title {
@@ -370,14 +396,37 @@ hr {
      transform: scale(0.95);
      transition: 0.4s;
      user-select: none;
+     display:flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     align-items: center;
+     justify-content: flex-start;
    }
 
    .officer:hover {
      transform: scale(1);
    }
 
+   .officer-title {
+     font-weight: bold;
+   }
+
+   .officer-title.lg {
+     font-size: 2.5em;
+   }
+
+   .officer-title.sm {
+     font-size: 1.5em;
+   }
+
+   .officer > p {
+     font-size: 1em;
+   }
+
    .calendarContainer {
      width: 75%;
    }
+
+
 
  }
