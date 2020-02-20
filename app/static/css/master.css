@@ -183,11 +183,17 @@ canvas {
 }
 
 footer {
-  min-height: 200px;
+  min-height: 150px;
   height: auto;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
 }
 
 .socialMedia {
