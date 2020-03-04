@@ -358,8 +358,8 @@ hr {
      margin: 0 auto;
    }
 
-   .no-wide {
-     width: 60%;
+   .main-section {
+     width: 75%;
    }
 
    .content p {

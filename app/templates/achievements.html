@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="content">
+<div class="content main-section">
   <h1 class="title black">Achievements</h1>
 </div>
 <!--
@@ -11,7 +11,7 @@
   achievementsList is passed in by the route: achievements
  -->
 {% for a in achievementsList %}
-<div class="content no-wide">
+<div class="content main-section">
     <h2 class="award">{{a.awardName}}</h2>
     <h3 class="awardee">{{a.name}}</h3>
     <!-- <h3 class="description">About the Achievement:</h3> -->
