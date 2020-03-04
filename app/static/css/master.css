@@ -215,6 +215,11 @@ footer p {
   align-items: center;
 }
 
+/*
+  My browser (Brave) was applying its own rules to
+  pretty much everything that had actual
+  names of social media sites, so theyre weirdly named.
+*/
 .icon-twit,
 .icon-inst,
 .icon-engage {
