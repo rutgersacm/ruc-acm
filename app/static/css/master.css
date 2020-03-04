@@ -215,6 +215,25 @@ footer p {
   align-items: center;
 }
 
+.icon-twit,
+.icon-inst,
+.icon-engage {
+  transition: fill 0.25s;
+  fill: white;
+}
+
+.icon-twit:hover {
+  fill: #55acee;
+}
+
+.icon-inst:hover {
+  fill: #ffdc80;
+}
+
+.icon-engage:hover {
+  fill: #cc0033;
+}
+
 img {
   display: block;
   width: 100%;
@@ -246,6 +265,12 @@ img {
 hr {
   margin-left: 1.5em;
   margin-right: 1.5em;
+}
+
+.lazy-loaded-image-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5em;
 }
 
  @media only screen and (min-width: 600px) {
@@ -326,6 +351,10 @@ hr {
    .content {
      padding: 1.5em;
      margin: 0 auto;
+   }
+
+   .no-wide {
+     width: 60%;
    }
 
    .content p {
@@ -439,6 +468,52 @@ hr {
      width: 75%;
    }
 
+   .lazy-loaded-image-container {
+     width: 75%;
+     margin: 0 auto;
+     padding: 1em;
+   }
 
+}
 
- }
+/*PHOTOS*/
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 2%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+}

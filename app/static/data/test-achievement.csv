@@ -1,5 +1,2 @@
-awardName,name,description
-"The Award for Achievement","Chris","lorem ipsum dolor sit amet"
-"The Award for Memes","David","lorem ipsum dolor sit amet"
-"The Award for Snakes","Stephen","lorem ipsum dolor sit amet"
-"The Award for Beans","Ryan","lorem ipsum dolor sit amet"
+awardName,name,description,photoLink
+"ProfHacks 2020: Best Domain Name","Eddy, Jake, Jesse, Chris","This team won the award for 'Best Domain Name' at ProfHacks 2020. Their app, NextMeal, was intended to solve the problem of food waste in businesses, and food insecurity by letting businesses donate food to those in need. The app was hosted on the domain http://nextmeal.live","./static/images/achievements/nextmeal.jpeg"

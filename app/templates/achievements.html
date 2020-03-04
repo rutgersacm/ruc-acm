@@ -11,14 +11,17 @@
   achievementsList is passed in by the route: achievements
  -->
 {% for a in achievementsList %}
-<div class="content">
-    <h2 class="award">Name of the Award: {{a.awardName}}</h2>
-    <h3 class="awardee">Achieved By: {{a.name}}</h3>
-    <h3 class="description">About the Achievement:</h3>
+<div class="content no-wide">
+    <h2 class="award">{{a.awardName}}</h2>
+    <h3 class="awardee">{{a.name}}</h3>
+    <!-- <h3 class="description">About the Achievement:</h3> -->
         <p>{{a.description}}</p>
     <h3 class="photo">Photos:</h3>
+    {% if a.photoLink != "" or a.photoLink != None %}
+      <img src={{a.photoLink}} alt={{a.awardName}} />
+    {% endif %}
+    <hr />
 </div>
-<hr />
 {% endfor %}
 
 {% endblock %}
